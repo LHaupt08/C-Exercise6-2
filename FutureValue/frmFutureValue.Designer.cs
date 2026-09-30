@@ -57,6 +57,7 @@
             txtMonthlyInvestment.Size = new Size(100, 23);
             txtMonthlyInvestment.TabIndex = 1;
             txtMonthlyInvestment.TextChanged += ClearFutureValue;
+            txtMonthlyInvestment.MouseHover += ClearFutureValue;
             // 
             // label2
             // 
@@ -75,6 +76,7 @@
             txtInterestRate.Size = new Size(100, 23);
             txtInterestRate.TabIndex = 3;
             txtInterestRate.TextChanged += ClearFutureValue;
+            txtInterestRate.DoubleClick += txtInterestRate_DoubleClick;
             // 
             // label3
             // 
@@ -153,6 +155,7 @@
             Name = "frmFutureValue";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Future Value";
+            DoubleClick += frmFutureValue_DoubleClick;
             ResumeLayout(false);
             PerformLayout();
 
